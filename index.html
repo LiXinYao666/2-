@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>检查中...</title>
+</head>
+<body>
+    <script>
+        // 检查设备类型并跳转
+        function checkDeviceAndRedirect() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // 如果是手机，跳转到./M/M.html
+                window.location.href = './M/M.html';
+            } else {
+                // 如果是电脑，跳转到./PC/PC.html
+                window.location.href = './PC/PC.html';
+            }
+        }
+
+        // 在页面加载完毕后执行检查设备的操作
+        window.onload = function() {
+            checkDeviceAndRedirect();
+        }
+    </script>
+</body>
+</html>
